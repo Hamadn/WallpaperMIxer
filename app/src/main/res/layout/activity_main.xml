@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="126dp"
+        android:layout_height="121dp"
+        android:contentDescription="Image1"
+        android:tag="null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15"
+        app:srcCompat="@null" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="57dp"
+        android:layout_height="33dp"
+        android:text="+"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.196" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="128dp"
+        android:layout_height="120dp"
+        android:contentDescription="Image2"
+        android:tag="null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Clear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.348" />
+
+    <Button
+        android:id="@+id/mixButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Mix"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintLeft_toRightOf="@id/clearButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.348" />
+
+    <ImageButton
+        android:id="@+id/blue_blossom"
+        android:layout_width="113dp"
+        android:layout_height="101dp"
+        android:clickable="true"
+        android:contentDescription="blue_blossom"
+        android:scaleType="centerCrop"
+        android:tag="blue_blossom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.506"
+        app:srcCompat="@drawable/blue_blossom"
+        android:focusable="true" />
+
+    <ImageButton
+        android:id="@+id/blue_planets"
+        android:layout_width="112dp"
+        android:layout_height="107dp"
+        android:clickable="true"
+        android:contentDescription="blue_planets"
+        android:scaleType="centerCrop"
+        android:tag="blue_planets"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.921"
+        app:srcCompat="@drawable/blue_planets"
+        android:focusable="true" />
+
+    <ImageButton
+        android:id="@+id/caffe"
+        android:layout_width="113dp"
+        android:layout_height="102dp"
+        android:clickable="true"
+        android:contentDescription="caffe"
+        android:scaleType="centerCrop"
+        android:tag="caffe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.507"
+        app:srcCompat="@drawable/caffe" />
+
+    <ImageButton
+        android:id="@+id/coffee"
+        android:layout_width="113dp"
+        android:layout_height="109dp"
+        android:clickable="true"
+        android:contentDescription="coffee"
+        android:scaleType="centerCrop"
+        android:tag="coffee"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.921"
+        app:srcCompat="@drawable/coffee"
+        android:focusable="true" />
+
+    <ImageButton
+        android:id="@+id/cozy"
+        android:layout_width="113dp"
+        android:layout_height="107dp"
+        android:clickable="true"
+        android:contentDescription="cozy"
+        android:scaleType="centerCrop"
+        android:tag="cozy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.709"
+        app:srcCompat="@drawable/cozy" />
+
+    <ImageButton
+        android:id="@+id/planet"
+        android:layout_width="113dp"
+        android:layout_height="106dp"
+        android:clickable="true"
+        android:contentDescription="planet"
+        android:scaleType="centerCrop"
+        android:tag="planet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.708"
+        app:srcCompat="@drawable/planet" />
+
+    <ImageButton
+        android:id="@+id/red_planet"
+        android:layout_width="113dp"
+        android:layout_height="100dp"
+        android:clickable="true"
+        android:contentDescription="red_planet"
+        android:scaleType="centerCrop"
+        android:tag="red_planet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.505"
+        app:srcCompat="@drawable/red_planet" />
+
+    <ImageButton
+        android:id="@+id/rose"
+        android:layout_width="113dp"
+        android:layout_height="104dp"
+        android:clickable="true"
+        android:contentDescription="rose"
+        android:scaleType="centerCrop"
+        android:tag="rose"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.711"
+        app:srcCompat="@drawable/rose" />
+
+    <ImageButton
+        android:id="@+id/sky"
+        android:layout_width="112dp"
+        android:layout_height="112dp"
+        android:clickable="true"
+        android:contentDescription="sky"
+        android:scaleType="centerCrop"
+        android:tag="sky"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92"
+        app:srcCompat="@drawable/sky" />
+</androidx.constraintlayout.widget.ConstraintLayout>
