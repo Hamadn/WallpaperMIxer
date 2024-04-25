@@ -5,20 +5,23 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
+
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="126dp"
-        android:layout_height="121dp"
+        android:layout_width="160dp"
+        android:layout_height="90dp"
+        android:background="@drawable/background"
         android:contentDescription="Image1"
         android:tag="null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintVertical_bias="0.223"
         app:srcCompat="@null" />
 
     <TextView
@@ -33,21 +36,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.196" />
+        app:layout_constraintVertical_bias="0.247" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="128dp"
-        android:layout_height="120dp"
+        android:layout_width="160dp"
+        android:layout_height="90dp"
+        android:background="@drawable/background"
         android:contentDescription="Image2"
         android:tag="null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintHorizontal_bias="0.936"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15" />
-
+        app:layout_constraintVertical_bias="0.223" />
 
     <Button
         android:id="@+id/clearButton"
@@ -57,10 +60,11 @@
         android:text="Clear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintHorizontal_bias="0.272"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.348" />
+        app:layout_constraintVertical_bias="0.382"
+        android:focusable="true" />
 
     <Button
         android:id="@+id/mixButton"
@@ -70,11 +74,12 @@
         android:text="Mix"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintHorizontal_bias="0.724"
         app:layout_constraintLeft_toRightOf="@id/clearButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.348" />
+        app:layout_constraintVertical_bias="0.382"
+        android:focusable="true" />
 
     <ImageButton
         android:id="@+id/blue_blossom"
@@ -82,16 +87,16 @@
         android:layout_height="101dp"
         android:clickable="true"
         android:contentDescription="blue_blossom"
+        android:focusable="true"
         android:scaleType="centerCrop"
         android:tag="blue_blossom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.506"
-        app:srcCompat="@drawable/blue_blossom"
-        android:focusable="true" />
+        app:layout_constraintVertical_bias="0.545"
+        app:srcCompat="@drawable/blue_blossom" />
 
     <ImageButton
         android:id="@+id/blue_planets"
@@ -99,6 +104,7 @@
         android:layout_height="107dp"
         android:clickable="true"
         android:contentDescription="blue_planets"
+        android:focusable="true"
         android:scaleType="centerCrop"
         android:tag="blue_planets"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -106,9 +112,8 @@
         app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.921"
-        app:srcCompat="@drawable/blue_planets"
-        android:focusable="true" />
+        app:layout_constraintVertical_bias="0.904"
+        app:srcCompat="@drawable/blue_planets" />
 
     <ImageButton
         android:id="@+id/caffe"
@@ -120,11 +125,12 @@
         android:tag="caffe"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintHorizontal_bias="0.939"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.507"
-        app:srcCompat="@drawable/caffe" />
+        app:layout_constraintVertical_bias="0.543"
+        app:srcCompat="@drawable/caffe"
+        android:focusable="true" />
 
     <ImageButton
         android:id="@+id/coffee"
@@ -132,15 +138,15 @@
         android:layout_height="109dp"
         android:clickable="true"
         android:contentDescription="coffee"
+        android:focusable="true"
         android:scaleType="centerCrop"
         android:tag="coffee"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.921"
-        app:srcCompat="@drawable/coffee"
-        android:focusable="true" />
+        app:layout_constraintVertical_bias="0.903"
+        app:srcCompat="@drawable/coffee" />
 
     <ImageButton
         android:id="@+id/cozy"
@@ -154,8 +160,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.709"
-        app:srcCompat="@drawable/cozy" />
+        app:layout_constraintVertical_bias="0.722"
+        app:srcCompat="@drawable/cozy"
+        android:focusable="true" />
 
     <ImageButton
         android:id="@+id/planet"
@@ -170,8 +177,9 @@
         app:layout_constraintHorizontal_bias="0.946"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.708"
-        app:srcCompat="@drawable/planet" />
+        app:layout_constraintVertical_bias="0.721"
+        app:srcCompat="@drawable/planet"
+        android:focusable="true" />
 
     <ImageButton
         android:id="@+id/red_planet"
@@ -185,29 +193,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.505"
-        app:srcCompat="@drawable/red_planet" />
+        app:layout_constraintVertical_bias="0.545"
+        app:srcCompat="@drawable/red_planet"
+        android:focusable="true" />
 
     <ImageButton
         android:id="@+id/rose"
-        android:layout_width="113dp"
-        android:layout_height="104dp"
+        android:layout_width="112dp"
+        android:layout_height="105dp"
         android:clickable="true"
         android:contentDescription="rose"
         android:scaleType="centerCrop"
         android:tag="rose"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.711"
-        app:srcCompat="@drawable/rose" />
+        app:layout_constraintVertical_bias="0.72"
+        app:srcCompat="@drawable/rose"
+        android:focusable="true" />
 
     <ImageButton
         android:id="@+id/sky"
         android:layout_width="112dp"
-        android:layout_height="112dp"
+        android:layout_height="110dp"
         android:clickable="true"
         android:contentDescription="sky"
         android:scaleType="centerCrop"
@@ -217,6 +227,59 @@
         app:layout_constraintHorizontal_bias="0.946"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.92"
-        app:srcCompat="@drawable/sky" />
+        app:layout_constraintVertical_bias="0.903"
+        app:srcCompat="@drawable/sky"
+        android:focusable="true" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.112"
+        app:srcCompat="@drawable/book"
+        android:contentDescription="info" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.435" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/backgroundColor"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/toolbar_custom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Wallpaper Mixer"/>
+    </androidx.appcompat.widget.Toolbar>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

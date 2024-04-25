@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.WallpaperMixer" parent="Base.Theme.WallpaperMixer" />
+    
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="postSplashScreenTheme">@style/Theme.WallpaperMixer</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
+    </style>
 </resources>
