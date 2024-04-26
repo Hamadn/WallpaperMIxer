@@ -1,6 +1,7 @@
 package com.example.wallpapermixer
 
 import android.animation.ObjectAnimator
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -227,6 +228,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun displayResultingImage(resultingImageResource: Int) {
         if (imageView1.tag == null && imageView2.tag == null) {
             Snackbar.make(findViewById(android.R.id.content), "Please select two images to mix.", Snackbar.LENGTH_SHORT).show()
