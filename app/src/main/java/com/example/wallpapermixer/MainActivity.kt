@@ -1,6 +1,7 @@
 package com.example.wallpapermixer
 
 import android.animation.ObjectAnimator
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -111,12 +112,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setInfoButtonListener() {
-        infoButton.setOnClickListener{
+        infoButton.setOnClickListener {
             val dialog = Dialog(this)
             dialog.setContentView(R.layout.custom_popup_layout)
 
             val closeButton: Button = dialog.findViewById(R.id.closeButton)
-            closeButton.setOnClickListener{
+            closeButton.setOnClickListener {
                 dialog.dismiss()
             }
             dialog.show()
@@ -221,15 +222,23 @@ class MainActivity : AppCompatActivity() {
             Pair(R.drawable.sky, R.drawable.red_planet) to R.drawable.sky_redplanet,
             Pair(R.drawable.sky, R.drawable.rose) to R.drawable.rose_sky
         )
-        return combinationsToImages.getOrElse(Pair(tag1, tag2) as Pair<Int, Int>) { R.drawable.cozy }
+        return combinationsToImages.getOrElse(Pair(tag1, tag2) as Pair<Int, Int>) {
+            Snackbar.make(findViewById(android.R.id.content), "Invalid image combination", Snackbar.LENGTH_SHORT).show()
+            R.drawable.cozy
+        }
     }
 
     private fun displayResultingImage(resultingImageResource: Int) {
+        if (imageView1.tag == null && imageView2.tag == null) {
+            Snackbar.make(findViewById(android.R.id.content), "Please select two images to mix.", Snackbar.LENGTH_SHORT).show()
+            return
+        }
         if (imageView1.tag == null || imageView2.tag == null) {
             Snackbar.make(findViewById(android.R.id.content), "Please select two images to mix.", Snackbar.LENGTH_SHORT).show()
             return
         }
-        val resultingImageDrawable = ResourcesCompat.getDrawable(resources, resultingImageResource, null)
+        val resultingImageDrawable =
+            ResourcesCompat.getDrawable(resources, resultingImageResource, null)
         val popupView = LayoutInflater.from(this).inflate(R.layout.result_popup_layout, null)
         val popupImageView = popupView.findViewById<ImageView>(R.id.resultImageView)
         popupImageView.setImageDrawable(resultingImageDrawable)

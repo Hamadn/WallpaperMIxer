@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="350dp"
     android:layout_height="350dp"
     android:layout_gravity="center"
@@ -15,7 +16,8 @@
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
         android:text="Instructions"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        tools:ignore="HardcodedText" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -33,7 +35,8 @@
             android:textColor="@color/yellow"
             android:textSize="15sp"
             android:textStyle="normal"
-            android:text="1. Select any two images you want to mix from the layout."/>
+            android:text="1. Select any two images you want to mix from the layout."
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/instructionDescriptionTwo"
@@ -43,7 +46,8 @@
             android:textSize="15sp"
             android:textStyle="normal"
             android:layout_marginTop="8dp"
-            android:text="2. Click on the Mix button and get the result of the two images"/>
+            android:text="2. Click on the Mix button and get the result of the two images"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/instructionDescriptionThree"
@@ -53,7 +57,8 @@
             android:textSize="15sp"
             android:textStyle="normal"
             android:layout_marginTop="8dp"
-            android:text="3. You can add different images with the first image you selected without clear."/>
+            android:text="3. You can add different images with the first image you selected without clear."
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/instructionDescriptionFour"
@@ -63,7 +68,8 @@
             android:textSize="15sp"
             android:textStyle="normal"
             android:layout_marginTop="8dp"
-            android:text="4. If you want to mix other images just click the clear button and choose images."/>
+            android:text="4. If you want to mix other images just click the clear button and choose images."
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/closeButton"
@@ -73,7 +79,8 @@
             android:layout_marginTop="24dp"
             android:backgroundTint="@color/colorAccent"
             android:textColor="@color/white"
-            android:text="Close" />
+            android:text="Close"
+            tools:ignore="HardcodedText" />
 
     </LinearLayout>
 
