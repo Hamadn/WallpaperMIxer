@@ -3,6 +3,7 @@ package com.example.wallpapermixer
 import android.animation.ObjectAnimator
 import android.app.Dialog
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
 import android.view.animation.OvershootInterpolator
 import android.widget.*
@@ -11,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.animation.doOnEnd
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.google.android.material.snackbar.Snackbar
+
 
 class MainActivity : AppCompatActivity() {
     private val viewModel by viewModels<MainViewModel>()
@@ -19,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var clearButton: Button
     private lateinit var mixButton: Button
     private lateinit var imageButtons: List<ImageButton>
-
+    private lateinit var infoButton: ImageButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         installSplashScreen().apply {
@@ -57,6 +60,7 @@ class MainActivity : AppCompatActivity() {
         imageView2 = findViewById(R.id.imageView2)
         clearButton = findViewById(R.id.clearButton)
         mixButton = findViewById(R.id.mixButton)
+        infoButton = findViewById(R.id.info)
 
         imageButtons = listOf(
             findViewById(R.id.blue_blossom),
@@ -73,6 +77,7 @@ class MainActivity : AppCompatActivity() {
         setOnClickListeners()
         setClearButtonListener()
         setMixButtonListener()
+        setInfoButtonListener()
     }
 
     private fun setOnClickListeners() {
@@ -83,6 +88,10 @@ class MainActivity : AppCompatActivity() {
                     "drawable",
                     packageName
                 )
+                if (imageView1.tag == clickedImageResource || imageView2.tag == clickedImageResource) {
+                    Snackbar.make(findViewById(android.R.id.content), "Image already selected", Snackbar.LENGTH_SHORT).show()
+                    return@setOnClickListener
+                }
                 setImageToEmptyImageView(clickedImageResource)
             }
         }
@@ -98,6 +107,19 @@ class MainActivity : AppCompatActivity() {
         clearButton.setOnClickListener {
             clearImageView(imageView1)
             clearImageView(imageView2)
+        }
+    }
+
+    private fun setInfoButtonListener() {
+        infoButton.setOnClickListener{
+            val dialog = Dialog(this)
+            dialog.setContentView(R.layout.custom_popup_layout)
+
+            val closeButton: Button = dialog.findViewById(R.id.closeButton)
+            closeButton.setOnClickListener{
+                dialog.dismiss()
+            }
+            dialog.show()
         }
     }
 
@@ -204,16 +226,19 @@ class MainActivity : AppCompatActivity() {
 
     private fun displayResultingImage(resultingImageResource: Int) {
         if (imageView1.tag == null || imageView2.tag == null) {
-            Toast.makeText(this, "Please select two images to mix.", Toast.LENGTH_SHORT).show()
+            Snackbar.make(findViewById(android.R.id.content), "Please select two images to mix.", Snackbar.LENGTH_SHORT).show()
             return
         }
         val resultingImageDrawable = ResourcesCompat.getDrawable(resources, resultingImageResource, null)
-        val imageView = ImageView(this)
-        imageView.setImageDrawable(resultingImageDrawable)
+        val popupView = LayoutInflater.from(this).inflate(R.layout.result_popup_layout, null)
+        val popupImageView = popupView.findViewById<ImageView>(R.id.resultImageView)
+        popupImageView.setImageDrawable(resultingImageDrawable)
+        val popupTextView = popupView.findViewById<TextView>(R.id.resultTextView)
+        popupTextView.text = "Mixed Image"
         val popup = Dialog(this)
-        popup.setContentView(imageView)
-        popup.window?.setBackgroundDrawableResource(android.R.color.transparent)
+        popup.setContentView(popupView)
+        popup.window?.setBackgroundDrawableResource(android.R.color.white)
         popup.show()
-        imageView.setOnClickListener { popup.dismiss() }
+        popupImageView.setOnClickListener { popup.dismiss() }
     }
 }

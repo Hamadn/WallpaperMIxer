@@ -58,6 +58,7 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:text="Clear"
+        android:backgroundTint="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.272"
@@ -72,6 +73,7 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:text="Mix"
+        android:backgroundTint="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.724"
@@ -232,11 +234,12 @@
         android:focusable="true" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/info"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:background="@color/white"
         android:scaleType="fitCenter"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.954"
@@ -261,10 +264,10 @@
         android:id="@+id/toolbar2"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/white"
+        android:background="@color/cardview_dark_background"
+        android:elevation="10dp"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/backgroundColor"
-        android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -276,10 +279,10 @@
             android:id="@+id/toolbar_custom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#000"
+            android:text="Wallpaper Mixer"
+            android:textColor="#ffc107"
             android:textSize="25sp"
-            android:textStyle="bold"
-            android:text="Wallpaper Mixer"/>
+            android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="350dp"
+    android:layout_gravity="center"
+    android:background="@drawable/background"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/instructionHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#87ceeb"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:text="Instructions"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/instructionHeading"
+        android:padding="16dp"
+        android:background="@drawable/card_background">
+
+        <TextView
+            android:id="@+id/instructionDescriptionOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/yellow"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:text="1. Select any two images you want to mix from the layout."/>
+
+        <TextView
+            android:id="@+id/instructionDescriptionTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/yellow"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_marginTop="8dp"
+            android:text="2. Click on the Mix button and get the result of the two images"/>
+
+        <TextView
+            android:id="@+id/instructionDescriptionThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/yellow"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_marginTop="8dp"
+            android:text="3. You can add different images with the first image you selected without clear."/>
+
+        <TextView
+            android:id="@+id/instructionDescriptionFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/yellow"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_marginTop="8dp"
+            android:text="4. If you want to mix other images just click the clear button and choose images."/>
+
+        <Button
+            android:id="@+id/closeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@color/white"
+            android:text="Close" />
+
+    </LinearLayout>
+
+</RelativeLayout>
